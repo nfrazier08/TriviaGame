@@ -141,7 +141,7 @@ var	playerChoice1 = $("#opt1");
 var	playerChoice2 = $("#opt2");
 var	playerChoice3 = $("#opt3");
 var	playerChoice4 = $("#opt4");
-var counter = 30;
+
 
 //Hide the HideShow question container of the questions
 $(".hideShow").hide();
@@ -150,14 +150,13 @@ $(".hideShow").hide();
 	//container showing questions will show and start button will hide
 $("#startButton").on('click',function(){
 	$(".hideShow").show();
+	$("#startButton").hide();
+
 
 })
 
-
-
-
-
 //Timer
+var counter = 30;
 var timer = $("#myTimer");
 timer.html(30)
 
@@ -165,31 +164,20 @@ function countDown(){
 	counter--;
 	timer.html(counter);
 	if(counter===0){
-		clearInterval(interval)
+		clearInterval(interval);
 	}
+
 }
-	
 var interval = setInterval(countDown, 1000);
 
 
 
 
+})//THE END--DON'T TOUCH
 
 
 
 
-
-})
-
-
-
-
-
-
-
-
-//End of doc write
-	
 
 
 
