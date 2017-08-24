@@ -2,13 +2,12 @@ ul{
 	list-style: none;
 }
 
-/*body {
+body{
 	background-color: #BC8F8F;
 }
 
 .container{
-	width:1050px;
-	min-height: 700px;
+	width:800px;
 	position: absolute;
 	background-color: #DEB887;
 	right:0;
@@ -18,64 +17,24 @@ ul{
 	border: solid 1px;
 }
 
-.title{
-	font-family: 'Dancing Script', cursive;
-	font-size: 75px;
-	text-align: center;
-	margin-bottom: 20px; 
+h1{
+	font-family: "Times New Roman", Georgia, Serif;
+	font-size: 35px;
 }
 
-#timer{
-	text-align: center;
-	font-family: 'Dancing Script', cursive;
-	font-size: 50px;
+#theQuestion{
+	font-size: 25px;
 }
 
-#startButton{
-	padding:15px;
-	font-size: 30px;
-	background-color: #D2691E;
-	font-family: 'Lora', serif;
-	border: solid 1px;
+li {
+	background-color: #bf8040;
+	margin-right: 25px;
+	padding:10px;
+	margin-bottom: 5px;
+	font-size: 20px;
 }
 
-#startButton:hover{
-	background-color: #B03A2E;
+li:hover {
+	background-color: #cc0066;
+	font-size: 25px;
 }
-
-#startOverButton{
-	padding:15px;
-	font-size: 30px;
-	background-color: #D2691E;
-	font-family: 'Lora', serif;
-	border: solid 1px;
-}
-
-#startOverButton:hover{
-	background-color: #B03A2E;
-}
-
-.question{
-	padding:20px;
-	font-size: 22px;
-	background: #784212;
-	border-radius:20px;
-	margin:20px 20px 25px;
-}
-
-.option{
-	width: 450px;
-	display: block;
-	padding:10px 0 10px 15px;
-	margin: 0 auto;
-	margin-bottom: 25px;
-	background-color: #CA6F1E;
-	border-radius:20px;
-}
-
-.option:hover{
-	background-color: #B03A2E;
-}
-
-
-*/

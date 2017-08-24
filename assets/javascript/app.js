@@ -178,22 +178,17 @@ var timer = $("#myTimer");
    			}); //End of the click function
 
 //STEP 4: Check to see if the player selection is correct answer
-	// for (var l = 0; l < myQuestions[i].answers.length; l++) {
-		if((".playerChoice") === (myQuestions.answer)) {
+	for (var i = 0; i < myQuestions[i].answer.length; i++) {
+			if(".playerChoice" === myQuestions.answer){
 			answeredRight++
-		} else {
+		}
+			else{
 			answeredWrong++
 		}
+	}//end of for loop
 
-		console.log("wrong " + answeredWrong);
-		console.log("right " + answeredRight);
-	// }//End of for loop
-		
-	
-
-
-
-
+console.log("r " + answeredRight);
+console.log("w " + answeredWrong);
 
 
 }) //document.ready
