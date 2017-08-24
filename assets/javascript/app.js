@@ -1,5 +1,5 @@
 //my global variables
-var counter = 45 ;
+var counter = 55 ;
 var myQuestions = [{
 	question: "What are complementary colors?",
 	choices: [	"Two primary colors mixed together",
@@ -140,7 +140,7 @@ $(".results").hide();
 //STEP 1:Create a simple function for the timer
 	//Clear timer once it gets to 0
 var timer = $("#myTimer");
-	timer.html("45");
+	timer.html("55");
 	var interval = setInterval(countdownTimer, 1000);
 
 	function countdownTimer(){
@@ -159,7 +159,7 @@ var timer = $("#myTimer");
 	//Clear question div 
 	$("#theQuestion").empty();
 		for (var i = 0; i < myQuestions.length; i++) {
-  			$("#theQuestion").append("<div><h4>" + myQuestions[i].question + "</div></h4>");
+  			$("#theQuestion").append("<div><h4>" + myQuestions[i].question + "</h4></div>");
   			var newUl = $("<ul>") //This is just a variable
 
   			//second for loop is to get choices to appear with the questions in an unordered list
@@ -167,6 +167,7 @@ var timer = $("#myTimer");
   				var newLi = $("<li>");
   				newLi.text(myQuestions[i].choices[j]); //Tell computer what text to put in the new LI
   				newUl.append(newLi);
+  				newLi.data('question', i)
 
   				$("#theQuestion").append(newUl);
   			}
@@ -181,17 +182,13 @@ var timer = $("#myTimer");
  			$(document).on("click", "li", function() {
  				//This line is logging what I click
  				console.log($(this).text());
+ 				var index = $(this).data('question');
  				$(this).addClass("selected");
- 				for (var i = 0; i < myQuestions.length; i++) {
- 					for (var g = 0; g < myQuestions[i].answer.length; g++) {
- 						
-	 					if (myQuestions[i].answer[g] === "selected") {
-	 						answeredRight++;
-	 					} else {
-	 						answeredWrong++;
-	 					}//else
-	 				}
- 				}//for loop
+ 				if (myQuestions[index].answer === $(this).text()) {
+ 					answeredRight++;
+				} else {
+					answeredWrong++;
+				}//else
  				
  			})//click function
  				
