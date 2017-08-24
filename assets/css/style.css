@@ -26,6 +26,10 @@ h1{
 	font-size: 25px;
 }
 
+#myTimer{
+	font-size: 35px;
+}
+
 li {
 	background-color: #bf8040;
 	margin-right: 25px;
@@ -37,4 +41,18 @@ li {
 li:hover {
 	background-color: #cc0066;
 	font-size: 25px;
+}
+
+.results{
+	width:800px;
+	position: absolute;
+	background-color: #DEB887;
+	right:0;
+	left:0;
+	margin: 0 auto;
+	text-align: center;
+	border: solid 1px;
+	padding: 50px;
+	font-family: "Times New Roman", Georgia, Serif;
+	font-size: 35px;
 }

@@ -133,6 +133,7 @@ var answeredWrong = 0;
 
 
 $(document).ready(function(){
+$(".results").hide();
 
 
 //STEP 1:Create a simple function for the timer
@@ -146,6 +147,10 @@ var timer = $("#myTimer");
 		timer.html(counter);
 		if (counter === 0){
 			clearInterval(interval);
+			$(".container").hide();
+			$(".results").show().html("<div>TIME\'S UP!!!</div>" +
+				"<div>Answered Right: " + answeredRight + "</div>" +
+				"<div>Answered Wrong: " + answeredWrong + "</div>");
 		}
 	}
 
