@@ -1,5 +1,5 @@
 //my global variables
-var counter = 5;
+var counter = 10;
 var myQuestions = [{
 	question: "What are complementary colors?",
 	choices: [	"Two primary colors mixed together",
@@ -139,7 +139,7 @@ $(".results").hide();
 //STEP 1:Create a simple function for the timer
 	//Clear timer once it gets to 0
 var timer = $("#myTimer");
-	timer.html("5");
+	timer.html("10");
 	var interval = setInterval(countdownTimer, 1000);
 
 	function countdownTimer(){
@@ -180,14 +180,8 @@ var timer = $("#myTimer");
  			$(document).on("click", "li", function() {
  				//This line is logging what I click
  				console.log($(this).text());
- 				$(this).addClass("playerChoice");
- 					for (var i = 0; i < myQuestions.length; i++) {
- 						for (var t = 0; t < myQuestions[i].choices.length; t++) {
- 							if(".playerChoice" === myQuestions[i].answer){
-								answeredRight++
- 								}; // end of if statement 					
- 						};//end of inner for loop
-					};//end of inner for loop
+ 				$(this).addClass("selected");
+ 					
    			}); //End of the click function
 
 //STEP 4: Check to see if the player selection is correct answer
