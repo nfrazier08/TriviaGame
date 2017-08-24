@@ -2,33 +2,18 @@
 <html>
 <head>
 	<title>Trivia Game</title>
-	<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 <body>
-	<div id="quizContainer" class="container">
-		<div class="title">Art Theory Quiz</div>
-		<button type="button" id="startButton">Start Game</button>
-	<div class="hideShow">
-		<p id="myTimer">Timer</p>
-		<div id="question" class="question"></div>
-			<label class="option"><input type="radio" name="option" value="1" /><span id="opt1"></span></label>
-			<label class="option"><input type="radio" name="option" value="2" /><span id="opt2"></span></label>
-			<label class="option"><input type="radio" name="option" value="3" /><span id="opt3"></span></label>
-			<label class="option"><input type="radio" name="option" value="4" /><span id="opt4"></span></label>
-
-	<!--Divs for the results and the start over button-->
-	<div class="resultsContainer">
-		<div class="correctAnswers"></div>
-		<div class="wrongAnswers"></div>
-		<div class="leftUnanswered"></div>
-		<button type="button" id="startOverButton">Start Over?</button>
-	</div><!--End of result container-->
-
-	</div><!--End of hideShow container-->
-
-	</div>
+	<h1>Art Theory Trivia</h1>
+		<div id="myTimer"></div>
+		<div id="theQuestion"></div>
+		<ul id="qList">
+			<li id="choiceA" class="answerChoice"></li>
+			<li id="choiceB" class="answerChoice"></li>
+			<li id="choiceC" class="answerChoice"></li>
+			<li id="choiceD" class="answerChoice"></li>
+		</ul>
 
 
 
