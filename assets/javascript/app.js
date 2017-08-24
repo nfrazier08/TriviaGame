@@ -178,19 +178,21 @@ var timer = $("#myTimer");
  	//To an element that already exists
  		//(in this case the document)
  			$(document).on("click", "li", function() {
+ 				//This line is logging what I click
  				console.log($(this).text());
  				$(this).addClass("playerChoice");
+ 					for (var i = 0; i < myQuestions.length; i++) {
+ 						for (var t = 0; t < myQuestions[i].choices.length; t++) {
+ 							if(".playerChoice" === myQuestions[i].answer){
+								answeredRight++
+ 								}; // end of if statement 					
+ 						};//end of inner for loop
+					};//end of inner for loop
    			}); //End of the click function
 
 //STEP 4: Check to see if the player selection is correct answer
-	for (var i = 0; i < myQuestions[i].answer.length; i++) {
-			if(".playerChoice" === myQuestions.answer){
-			answeredRight++
-		}
-			else{
-			answeredWrong++
-		}
-	}//end of for loop
+
+
 
 console.log("r " + answeredRight);
 console.log("w " + answeredWrong);
