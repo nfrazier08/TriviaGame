@@ -1,5 +1,5 @@
 //my global variables
-var counter = 10;
+var counter = 45 ;
 var myQuestions = [{
 	question: "What are complementary colors?",
 	choices: [	"Two primary colors mixed together",
@@ -58,7 +58,7 @@ var myQuestions = [{
 	answer: "Red and Red-Violet"
 },{
 	question: "What are secondary colors?",
-	choices: [	"Two colors opposite each other on the color wheel?",
+	choices: [	"Two colors opposite each other on the color wheel",
 				"Two primary colors mixed together",
 				"A tertiary color and a secondary color mixed together",
 				"Two analogous colors mixed together"],
@@ -130,6 +130,7 @@ var myQuestions = [{
 
 var answeredRight = 0;
 var answeredWrong = 0;
+var answerRepository = [];
 
 
 $(document).ready(function(){
@@ -139,7 +140,7 @@ $(".results").hide();
 //STEP 1:Create a simple function for the timer
 	//Clear timer once it gets to 0
 var timer = $("#myTimer");
-	timer.html("10");
+	timer.html("45");
 	var interval = setInterval(countdownTimer, 1000);
 
 	function countdownTimer(){
@@ -181,10 +182,20 @@ var timer = $("#myTimer");
  				//This line is logging what I click
  				console.log($(this).text());
  				$(this).addClass("selected");
- 					
-   			}); //End of the click function
+ 				for (var i = 0; i < myQuestions.length; i++) {
+ 					for (var g = 0; g < myQuestions[i].answer.length; g++) {
+ 						
+	 					if (myQuestions[i].answer[g] === "selected") {
+	 						answeredRight++;
+	 					} else {
+	 						answeredWrong++;
+	 					}//else
+	 				}
+ 				}//for loop
+ 				
+ 			})//click function
+ 				
 
-//STEP 4: Check to see if the player selection is correct answer
 
 
 
