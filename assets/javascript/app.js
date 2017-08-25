@@ -184,6 +184,7 @@ var timer = $("#myTimer");
  				console.log($(this).text());
  				var index = $(this).data('question');
  				$(this).addClass("selected");
+ 				$(this).siblings().removeClass("selected");
  				if (myQuestions[index].answer === $(this).text()) {
  					answeredRight++;
 				} else {
@@ -191,7 +192,8 @@ var timer = $("#myTimer");
 				}//else
  				
  			})//click function
- 				
+
+				
 
 
 
