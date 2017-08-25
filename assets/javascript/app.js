@@ -130,7 +130,7 @@ var myQuestions = [{
 
 var answeredRight = 0;
 var answeredWrong = 0;
-var answerRepository = [];
+
 
 
 $(document).ready(function(){
